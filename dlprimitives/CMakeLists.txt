@@ -7,7 +7,7 @@ if(NOT WIN32)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -O2 -Wall")
 endif()
 
-option(USE_CL_HPP "Use older CL/cl.hpp instead of CL/cl2.hpp" ON)
+option(USE_CL_HPP "Use older CL/cl.hpp instead of CL/cl2.hpp" OFF)
 option(USE_INTERNAL_BLAS "Use Internal Blas" OFF)
 option(USE_HDF "Compile with HDF support" ON)
 option(USE_SQLITE3 "Compile with sqlite3 support for kernel caching" ON)
@@ -254,7 +254,7 @@ set(DLPRIM_SRC
         src/ops/reshape.cpp
         src/ops/pointwise.cpp
         src/ops/reduction.cpp
-        src/ops/parameter.cppW
+        src/ops/parameter.cpp
         ${EXTRA_SRC}
         )
 
@@ -383,3 +383,4 @@ install(TARGETS
 	PUBLIC_HEADER DESTINATION include/dlprim)
 
 install(DIRECTORY include/dlprim DESTINATION include)
+
