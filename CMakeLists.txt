@@ -4,7 +4,7 @@ project(dlprim_backend)
 find_package(Torch REQUIRED)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
-option(BUILD_CORE_ONLY "Core Build" OFF)
+option(BUILD_CORE_ONLY "Core Build" ON)
 add_subdirectory(dlprimitives)
 include_directories("${OCL_PATH}")
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/dlprimitives)
