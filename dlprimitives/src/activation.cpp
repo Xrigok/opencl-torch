@@ -57,7 +57,7 @@ namespace dlprim {
             return "(min(max((" + variable + "),(dtype)(0)),(dtype)(6)))";
         case StandardActivations::gelu:
 
-            return "(dtype)(0.5)*"+variable+"*((dtype)(1)+tanh(sqrt(M_2_PI)*("+variable+"0.044715*"+variable"*"+variable+"*"+variable+")))";
+            return "(dtype)(0.5)*"+variable+"*((dtype)(1)+tanh(sqrt(M_2_PI)*("+variable+"0.044715*"+variable+"*"+variable+"*"+variable+")))";
         }
         throw ValidationError("Internal error invalid cativation");
     }
