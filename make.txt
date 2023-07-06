@@ -1,0 +1,9 @@
+cmake -D CMAKE_PREFIX_PATH=/home/xujinpo/workspace/GPU/OpenCL-Headers/install -D CMAKE_INSTALL_PREFIX=./OpenCL-ICD-Loader/install -S ./OpenCL-ICD-Loader -B ./OpenCL-ICD-Loader/build
+
+cmake -D CMAKE_PREFIX_PATH="/home/xujinpo/workspace/GPU/OpenCL-Headers/install;/absolute/path/to/OpenCL-ICD-Loader/install" -D CMAKE_INSTALL_PREFIX=./OpenCL-CLHPP/install -S ./OpenCL-CLHPP -B ./OpenCL-CLHPP/build
+
+cmake -D CMAKE_PREFIX_PATH="/home/xujinpo/workspace/GPU/OpenCL-Headers;/home/xujinpo/workspace/GPU/OpenCL-ICD-Loader;/home/xujinpo/workspace/GPU/OpenCL-CLHPP" /path/to/opencl/app
+
+cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -DOCL_PATH="/home/xujinpo/workspace/GPU/OpenCL-CLHPP/include/" -DCMAKE_PREFIX_PATH=/home/xujinpo/workspace/anaconda3/envs/torchcl/lib/python3.8/site-packages/torch/share/cmake/Torch ..
+
+cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -DOCL_PATH=/home/xujinpo/workspace/GPU/OpenCL-CLHPP/include/ -DCMAKE_PREFIX_PATH=/home/xujinpo/workspace/anaconda3/envs/torchcl/lib/python3.8/site-packages/torch/share/cmake/Torch -DCMAKE_TOOLCHAIN_FILE=../CMakeLists.txt ..
