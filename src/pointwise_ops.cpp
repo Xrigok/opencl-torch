@@ -77,7 +77,7 @@ using c10::DeviceType;
         GUARD;
         Tensor self_c = self.contiguous();
         dlprim::core::pointwise_operation({todp(self_c)},{todp(out)},{},
-                    "y0 = 0.5*x0*(1+tanh(sqrt(M_2_PI)*(x0+0.044715*x0*x0*x0)));",getExecutionContext(self));
+                    "y0 = 0.5*x0*(1+tanh(sqrt(M_2_PI_F)*(x0+0.044715*x0*x0*x0)));",getExecutionContext(self));
         sync_if_needed(self.device());
         return out;
     }
