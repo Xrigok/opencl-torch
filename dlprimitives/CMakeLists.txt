@@ -239,9 +239,6 @@ set(DLPRIM_SRC
         src/net.cpp
         src/ops/inner_product.cpp
         src/ops/batch_normalization.cpp
-        src/ops/layer_normalization.cpp
-        src/ops/maxpoolingindice.cpp
-        src/ops/batch_matmul.cpp
         src/ops/conv2d.cpp
         src/ops/activation.cpp
         src/ops/softmax.cpp
@@ -257,8 +254,7 @@ set(DLPRIM_SRC
         src/ops/reshape.cpp
         src/ops/pointwise.cpp
         src/ops/reduction.cpp
-        src/ops/parameter.cpp
-        src/ops/upsample_nearest2d.cpp
+        src/ops/parameter.cppW
         ${EXTRA_SRC}
         )
 
