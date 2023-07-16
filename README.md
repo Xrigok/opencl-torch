@@ -30,8 +30,6 @@ We test the partial of CSwin and yolov5 in 3090RTX, the result as follow:
 | CSwin tiny(cuda)| 80.2% | 40.04ms|
 | CSWin_base_224(our)|82.6%|79.86ms|
 | CSWin_base_224(cuda)|82.5%|60.70ms|
-| CSWin_base_384(our)|84.9%|102.65ms|
-| CSWin_base_384(cuda)|84.9%|6.23ms|
 | yolov5n(our) |-----|50.44ms| 
 | yolov5n(cuda)|-----|50.68ms|
 | yolov5l6(our) |-----|64.82ms| 
