@@ -35,4 +35,4 @@ We test the partial of CSwin and yolov5 in 3090RTX, the result as follow:
 | yolov5l6(our) |-----|64.82ms| 
 | yolov5nl6(cuda)|-----|63.41ms|
 
-CSwin tiny test used 1K images, yolov5 only test time.
+CSwin test used 1K images, yolov5 only test time [have same result at 4 images].
